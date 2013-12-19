@@ -1,0 +1,26 @@
+﻿@model PicturesExchange.Models.Picture
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Picture</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+        </dt>
+
+        <dd>
+            <img src="/PicturesExchange/GetImage/@Model.ID" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
